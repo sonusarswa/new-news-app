@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiKey = "37abc7b5d8fb43be92c052e416f18229";
+const apiKey =process.env.REACT_APP_API_KEY;
 
 const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 const urlTech = `https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=${apiKey}`;
