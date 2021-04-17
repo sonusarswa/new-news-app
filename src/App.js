@@ -1,17 +1,17 @@
 import './App.css';
-import {useEffect} from 'react';
+import {useEffect,useState} from 'react';
 import {useDispatch,useSelector} from 'react-redux';
 import {Head} from "./components/header";
 import {News} from "./components/newsCard";
-import {Trial} from "./components/justForTrial";
 import { getNews } from './actions/news';
+import {CircularProgress} from '@material-ui/core';
 
 function App() {
   const dispatch = useDispatch();
-  const news = useSelector((state)=>state.news)
+  const news = useSelector((state)=>state.news);
   useEffect(()=>{
     dispatch(getNews());
-    console.log("Hello from useEffect in App")
+    console.log("Hello from useEffect in App");
   },[]);
   console.log("Hello from APP");
   console.log("newsFromApp : ", news);
@@ -19,7 +19,6 @@ function App() {
     <div>
       <Head/>
       <News>{news}</News>
-      {/* <Trial></Trial> */}
     </div>
   );
 }

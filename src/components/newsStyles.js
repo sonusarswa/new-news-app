@@ -6,10 +6,20 @@ export default makeStyles((theme)=>({
         paddingLeft:"16px",
         width:'100%'
     },
+    link:{
+        color:"black"
+    },
     card:{
         marginTop:"10px",
+        height:"550px"
     },
-    cardHead:{},
-    cardTitle:{},
+    image:{
+        position:"",
+        height:"250px",
+        width:"400px"
+    },
+    cardTitle:{
+        position:"",
+    },
     cardCaption:{},
 }));
