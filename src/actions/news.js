@@ -4,7 +4,7 @@ import * as api from '../api/api';
 export const getNews = () => async (dispatch) => {
     try{
         const {data} = await api.getAll();
-        dispatch({type:"FETCH_ALL", payload:data.articles});
+        dispatch({type:"FETCH_ALL", payload:data});
         console.log("Hello from getNews");
         console.log(data);
     }
@@ -16,7 +16,7 @@ export const getNews = () => async (dispatch) => {
 export const getNewsTech = () => async (dispatch) => {
     try{
         const {data} = await api.getTech();
-        dispatch({type:"TECH_NEWS", payload:data.articles});
+        dispatch({type:"TECH_NEWS", payload:data});
         console.log("Hello from getTechNews");
         console.log("TechNews : ", data);
     }
@@ -28,7 +28,7 @@ export const getNewsTech = () => async (dispatch) => {
 export const getNewsEnt = () => async (dispatch) => {
     try{
         const {data} = await api.getEnt();
-        dispatch({type:"ENT_NEWS", payload:data.articles});
+        dispatch({type:"ENT_NEWS", payload:data});
         console.log("Hello from getNewsEnt");
         console.log("EntNews : ", data);
     }
@@ -40,7 +40,7 @@ export const getNewsEnt = () => async (dispatch) => {
 export const getNewsSports = () => async (dispatch) => {
     try {
         const {data} = await api.getSports();
-        dispatch({type:"SPORTS_NEWS", payload:data.articles});
+        dispatch({type:"SPORTS_NEWS", payload:data});
         console.log("Hello from getNewsSports");
         console.log("SportsNews : ",data);
     }
@@ -52,8 +52,8 @@ export const getNewsSports = () => async (dispatch) => {
 export const getNewsSearch = (search) => async (dispatch) => {
     try{
         const {data} = await api.getSearch(search);
-        dispatch({type:"SEARCH_NEWS", payload:data.articles});
-        console.log("Hello from getNEwsSearch");
+        dispatch({type:"SEARCH_NEWS", payload:data});
+        console.log("Hello from getNewsSearch");
         console.log("The Search Value was : ", search);
         console.log("SearchNews : ", data);
     }
@@ -65,7 +65,7 @@ export const getNewsSearch = (search) => async (dispatch) => {
 export const getNewsBusiness = () => async (dispatch) => {
     try{
         const {data} = await api.getBus();
-        dispatch({type:"BUSINESS_NEWS", payload:data.articles});
+        dispatch({type:"BUSINESS_NEWS", payload:data});
         console.log("Hello from getNewsBusiness");
         console.log("BusinessNews : ", data);
     }
