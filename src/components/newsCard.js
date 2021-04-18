@@ -24,7 +24,9 @@ export const News = (props) => {
                 }
                 subheader={moment(n.publishedAt).format("dddd, MMMM Do YYYY, h:mm:ss a")}
               ></CardHeader>
-              <img className={classes.image} src={n.urlToImage || altImage} ></img>
+              <div className={classes.imageDiv}>
+                <img className={classes.image} src={n.urlToImage || altImage} ></img>
+              </div>
               <CardContent>
                 <Typography>
                   {n.description}

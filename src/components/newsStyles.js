@@ -11,12 +11,16 @@ export default makeStyles((theme)=>({
     },
     card:{
         marginTop:"10px",
-        height:"550px"
+        height:"563px",
+        // overflow:"auto",
+    },
+    imageDiv:{
+        display:"flex",
+        justifyContent:"center",
     },
     image:{
-        position:"",
         height:"250px",
-        width:"400px"
+        width:"380px"
     },
     cardTitle:{
         position:"",
