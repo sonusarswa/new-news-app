@@ -2,11 +2,11 @@ import axios from 'axios';
 
 const apiKey =process.env.REACT_APP_API_KEY;
 
-const url = `http://localhost:5000/`;
-const urlTech = `http://localhost:5000/tech`;
-const urlEnt = `http://localhost:5000/ent`;
-const urlSports = `http://localhost:5000/sports`;
-const urlBusiness = `http://localhost:5000/business`;
+const url = `https://news-webserver.herokuapp.com/`;
+const urlTech = `https://news-webserver.herokuapp.com/tech`;
+const urlEnt = `https://news-webserver.herokuapp.com/ent`;
+const urlSports = `https://news-webserver.herokuapp.com/sports`;
+const urlBusiness = `https://news-webserver.herokuapp.com/business`;
 // const urlSearch = ;
 
 
@@ -18,5 +18,5 @@ export const getTech = () => axios.get(urlTech);
 export const getEnt = () => axios.get(urlEnt);
 export const getSports = () => axios.get(urlSports);
 export const getBus = () => axios.get(urlBusiness);
-export const getSearch = (search) => axios.post(`http://localhost:5000/search`,{search});
+export const getSearch = (search) => axios.post(`https://news-webserver.herokuapp.com/search`,{search});
 
