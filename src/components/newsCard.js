@@ -12,7 +12,7 @@ export const News = (props) => {
     console.log("newsFromNewsComp : ", news);
     return(
       <Grid container spacing={2} className={classes.grid}>
-        {news.map((n)=>
+        {news.news.map((n)=>
           <Grid item xs={12} sm={6} md={4} >
             <Card className={classes.card}>
               <CardHeader

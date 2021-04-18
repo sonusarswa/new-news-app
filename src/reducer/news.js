@@ -1,18 +1,20 @@
-export default (news=[],action) => {
+export default (initialState={news:[],load:true},action) => {
     switch(action.type){
         case "FETCH_ALL":
-            return action.payload;
+            return {...initialState, news:action.news,load:false};
         case "TECH_NEWS":
-            return action.payload;
+            return {...initialState,news:action.news,load:false};
         case "ENT_NEWS":
-            return action.payload;
+            return {...initialState,news:action.news,load:false};
         case "SPORTS_NEWS":
-            return action.payload;
+            return {...initialState,news:action.news,load:false};
         case "SEARCH_NEWS":
-            return action.payload;
+            return {...initialState,news:action.news,load:false};
         case "BUSINESS_NEWS":
-            return action.payload;
+            return {...initialState,news:action.news,load:false};
+        case "LOAD":
+            return {...initialState,news:[],load:true}
         default:
-            return news;
+            return {news:action.news,load:true};
     }
 }
