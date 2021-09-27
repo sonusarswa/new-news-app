@@ -18,6 +18,8 @@ export const getNews = () => async (dispatch) => {
         }
     }
     catch(error){
+        dispatch({type:"ERROR"});
+        console.log("error encountered");
         console.log(error);
     }
 }
@@ -37,6 +39,8 @@ export const getNewsTech = () => async (dispatch) => {
         }
     }
     catch(error){
+        dispatch({type:"ERROR"});
+        console.log("error encountered");
         console.log(error);
     }
 }
@@ -56,6 +60,8 @@ export const getNewsEnt = () => async (dispatch) => {
         }
     }
     catch(error){
+        dispatch({type:"ERROR"});
+        console.log("error encountered");
         console.log(error);
     }
 }
@@ -75,6 +81,8 @@ export const getNewsSports = () => async (dispatch) => {
         }
     }
     catch(error){
+        dispatch({type:"ERROR"});
+        console.log("error encountered");
         console.log(error);
     }
 }
@@ -95,6 +103,8 @@ export const getNewsSearch = (search) => async (dispatch) => {
         }
     }
     catch(error){
+        dispatch({type:"ERROR"});
+        console.log("error encountered");
         console.log(error);
     }
 }
@@ -114,6 +124,8 @@ export const getNewsBusiness = () => async (dispatch) => {
         }
     }
     catch(error){
+        dispatch({type:"ERROR"});
+        console.log("error encountered");
         console.log(error);
     }
 }
